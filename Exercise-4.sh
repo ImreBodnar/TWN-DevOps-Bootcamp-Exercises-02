@@ -1,24 +1,17 @@
 # Storing the username in an environment variable
-export TESTNAME=imre-bodnar
+export TESTNAME="imre"
 
 echo "Please type 'mem' or 'cpu' to sort the process list!"
 read sortType
 echo "Selected sorting is: $sortType"
 
-# Determining the sorting type
+# Listing all the processes of the given user
 if [[ $sortType == 'mem' ]]
 then
-    sorting="-%mem"
+    ps -U $TESTNAME -u $TESTNAME u --sort=-%mem
 elif [[ $sortType == 'cpu' ]]
 then
-    sorting="-%cpu"
+    ps -U $TESTNAME -u $TESTNAME u --sort=-%cpu
 else
     echo "Unknown input!"
-    sorting=""
-fi
-
-# Listing all the processes of the given user
-if [[ $sorting == "" ]]
-then
-    ps -U $TESTNAME -u $TESTNAME u --sort=$sorting
 fi
