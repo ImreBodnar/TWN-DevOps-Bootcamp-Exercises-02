@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#netstat -lntp | grep node
-
 ./Exercise-6.sh
 
 isRunning=false
@@ -21,6 +19,6 @@ then
     ps aux | grep "node server.js" | head -n 1
 
     # Showing the listening port of the app
-    echo -e "\nThe running app listening on port: "
+    echo -e "\nThe running app is listening on port: "
     ss -tnlp | grep node | awk '{print substr($4,3,4)}'
 fi
