@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Storing the username in an environment variable
 export TESTNAME="imre"
 

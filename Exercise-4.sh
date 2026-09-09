@@ -1,8 +1,9 @@
+#!/bin/bash
+
 # Storing the username in an environment variable
 export TESTNAME="imre"
 
-echo "Please type 'mem' or 'cpu' to sort the process list!"
-read sortType
+read -p "Please type 'mem' or 'cpu' to sort the process list! " sortType
 echo "Selected sorting is: $sortType"
 
 # Listing all the processes of the given user

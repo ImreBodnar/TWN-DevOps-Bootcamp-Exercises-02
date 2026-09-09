@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo -e "\nUPDATING PACKAGE LIST..."
 sudo apt update
 
